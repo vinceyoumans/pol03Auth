@@ -1,6 +1,6 @@
 <link rel="import" href="my-app.html">
-<link rel="import" href="bower_componenets/polymerfire/firebase-auth.html">
-<link rel="import" href="bower_componenets/paper-button/Paper-button.html">
+<link rel="import" href="bower_components/polymerfire/firebase-auth.html">
+<link rel="import" href="bower_components/paper-button/Paper-button.html">
 
 <dom-module id="my-login">
 <template>
@@ -37,10 +37,10 @@ Polymer({
         }
     },
     login(){
-        // return this.$.auth.signInWithPopup();
-            return    this.$.auth.signInWithPopup()
-            .then(function(response) {}) // successful authentication response here})
-            .catch(function(error) {});  // unsuccessful authentication response here});
+        // return this.$.auth.signInWithPopup();  //  not working.
+            return this.$.auth.signInWithPopup()
+                .then(function(response) {}) // successful authentication response here})
+                .catch(function(error) {});  // unsuccessful authentication response here});
     },
     logout(){
         return this.$.auth.signOut();
