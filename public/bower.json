@@ -1,0 +1,23 @@
+{
+  "name": "public",
+  "authors": [
+    "vincent youmans <vinceyoumans@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.1",
+    "polymerfire": "firebase/polymerfire#^2.1.0",
+    "paper-button": "PolymerElements/paper-button#^2.0.0"
+  }
+}

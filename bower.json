@@ -1,0 +1,17 @@
+{
+  "name": "PolTut03",
+  "authors": [
+    "vincent youmans <vinceyoumans@gmail.com>"
+  ],
+  "description": "test to do firebase authentication",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

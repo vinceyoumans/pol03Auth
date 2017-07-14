@@ -1,0 +1,52 @@
+<link rel="import" href="my-app.html">
+<link rel="import" href="bower_componenets/polymerfire/firebase-auth.html">
+<link rel="import" href="bower_componenets/paper-button/Paper-button.html">
+
+<dom-module id="my-login">
+<template>
+
+
+<firebase-auth 
+        id="auth" 
+        user="{{user}}" 
+        status-known="{{statusKnown}}"
+        provider="google" 
+        on-error="handleError">
+</firebase-auth>
+
+<template is="dom-if" if="[[user]]">
+<h1>Welcome [[user.displayName]]</h1>
+</template>
+
+
+<paper-button raised on-tap="login" hidden$="[[user]]"> Sign in</paper-button>
+<paper-button raised on-tap="logout" hidden$="[[!user]]"> Sign Out</paper-button>
+
+</template>
+
+<script>
+
+Polymer({
+    is: 'my-login',
+    properties:{
+        user: {
+            type: Object
+        },
+        statusKnown:{
+            type: Object
+        }
+    },
+    login(){
+        // return this.$.auth.signInWithPopup();
+            return    this.$.auth.signInWithPopup()
+            .then(function(response) {}) // successful authentication response here})
+            .catch(function(error) {});  // unsuccessful authentication response here});
+    },
+    logout(){
+        return this.$.auth.signOut();
+    }
+});
+
+
+</script>
+</dom-module>
